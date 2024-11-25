@@ -24,12 +24,27 @@
         <article>
             <section class="columns-desktop">
                 <div class="learningcard">
-                    <img src="romain-vignes-ywqa9IZB-dU-unsplash.jpg" alt="Dictionary" />
-                    <div class="title">Dictionary</div>
-                    <div class="card-body">
-                    <input type="text" class="search-bar" placeholder="Start typing any word...">
-                    <button>Search</button>
+                    <div class="topcard">
+                        <img src="romain-vignes-ywqa9IZB-dU-unsplash.jpg" alt="Dictionary" />
+                        <div class="title">Dictionary</div>
+                        <input type="text" class="inputValue" placeholder="Start typing any word...">
+                        <button class="btn" onclick="handleClick()">Search</button>
                     </div>
+                    <div class="bottomcard" style="display: none;">
+                        <h2 class="value"></h2>
+                        <h4>Parts of speech:</h4>
+                        <p class="partOfSpeech"></p>
+                        <h4>Definition:</h4>
+                        <p class="definition"></p>
+                        <h4 class="exampleLabel">Example:</h4>
+                        <p class="example"></p>
+                    </div>
+                </div>
+                <div class="learningcard">
+                    <img src="matteo-fusco-4zvnt60-pak-unsplash.jpg" alt="Thermometer" />
+                    <div class="title">Celsius to Fahrenheit Converter</div>
+                    <input type="text" class="search-bar" placeholder="Type temperature here...">
+                    <button>Search</button>
                 </div>
             </section>
         </article>
