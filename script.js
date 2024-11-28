@@ -1,11 +1,11 @@
 const handleClick = async () => {
+    const inputValue = document.querySelector('.inputValue').value.trim();
 
-    const inputValue = document.querySelector('.inputValue').value;
+    console.log("Input Value: ", inputValue);
 
-    if ("!inputValue || inputValue == ") {
-        
+
+    if (!inputValue || inputValue.trim() === "") {
         alert("Please enter any word to Search");
-        
         return;
     }
 
@@ -15,32 +15,27 @@ const handleClick = async () => {
 
         const response = await fetch(url);
 
-        const result = await response.json();
+    // Check if the response is ok (status 200-299)
+    if (!response.ok) {
+        throw new Error("Word not found or invalid request");
+    }
 
-        const responseObject = JSON.parse(result);
-
-        document.querySelector('.section2').style.display = 'block';
-
+    // Parse the response JSON
+    const result = await response.json();
+        document.querySelector('.bottomcard').style.display = 'block';
         document.querySelector('.value').innerText = inputValue;
+        document.querySelector('.partOfSpeech').innerText = result[0].meanings[0].partOfSpeech;
+        document.querySelector('.definition').innerText = result[0].meanings[0].definitions[0].definition;
 
-        document.querySelector('.partOfSpeech').innerText = responseObject[0].meanings[0].partOfSpeech;
-
-        document.querySelector('.definition').innerText = responseObject[0].meanings[0].definitions[0].definition;
-
-        if (responseObject[0].meanings[0].definitions[0].example) {
-
+        if (result[0].meanings[0].definitions[0].example) {
             document.querySelector('.exampleLabel').style.display = 'block';
-
             document.querySelector('.example').style.display = 'block';
-
-            document.querySelector('.example').innerText = responseObject[0].meanings[0].definitions[0].example;
+            document.querySelector('.example').innerText = result[0].meanings[0].definitions[0].example;
 
         } 
         
         else {
-
             document.querySelector('.exampleLabel').style.display = 'none';
-
             document.querySelector('.example').style.display = 'none';
 
         }        
@@ -48,20 +43,17 @@ const handleClick = async () => {
     }
 
     catch (error) {
-
         console.log(error);
-
         alert("Please check your Spelling! Try Again!");
-
-        document.querySelector('.section2').style.display = 'none';
+        document.querySelector('.bottomcard').style.display = 'none';
 
     }
+
+    const inputElement = document.querySelector('.inputValue');
 
     inputElement.addEventListener('input', function() {
 
         const inputValue = inputElement.value;
-
-        //const inputValue = document.querySelector('.inputValue').value;
 
         if (/[^a-zA-Z0-9]/.test(inputValue)) {
 
@@ -70,7 +62,7 @@ const handleClick = async () => {
             inputElement.value = inputValue.replace(/[^a-zA-Z0-9]/g, "");
         }
 
-    }
+    });
 
 }
 

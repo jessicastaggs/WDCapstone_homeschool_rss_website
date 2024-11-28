@@ -173,6 +173,7 @@
     }
 
     .learningcard .title {
+        font-size: 26px;
         font-weight: bold;
         text-align: center;
         color: rgb(255, 255, 255);
@@ -187,16 +188,42 @@
         color: rgb(255, 255, 255);
         cursor: pointer;
         
-
     }
 
-    .inputValue {
+    .inputValue, .search-bar {
         font-size: 17px;
         font-weight: bold;
         border-radius: 5px; 
-        border: inset 2px rgb(33, 158, 188);
+        border: inset 2px rgb(2, 23, 34);
                
     }
+
+        /* Bottom of Definition Card*/
+
+    .bottomcard {
+        color: rgb(255, 255, 255);
+            
+    }
+
+    .value {
+        font-size: 24px;
+        padding: 10px 0 10px 0;
+        text-transform: capitalize;
+        
+    }
+
+    h4 {
+        text-decoration: underline;
+        
+    }
+
+    .learningcard {
+        text-shadow: -1px 1px 0 rgb(2, 23, 34), 1px 1px 0 rgb(2, 23, 34), 1px -1px 0 rgb(2, 23, 34), -1px -1px 0 rgb(2, 23, 34);
+        /*text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255),
+        0px 0px 10px rgb(255, 255, 255);*/
+        
+    }
+
         /* Runner Image*/
 
     .imagecontainer {
