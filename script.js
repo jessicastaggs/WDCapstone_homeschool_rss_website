@@ -1,3 +1,15 @@
+//JavaScript to toggle the hamburger menu
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', function () {
+        console.log('Hamburger button clicked');
+        navLinks.classList.toggle('show');
+    });
+});
+
 const handleClick = async () => {
     const inputValue = document.querySelector('.inputValue').value.trim();
 

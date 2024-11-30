@@ -7,10 +7,6 @@
         margin-top: 0.5em;
     }
 
-    /*.banner {
-        max-width: 100%;
-    }*/
-
     .sub-title {
         background-color: white;
         text-align: center;
@@ -49,33 +45,55 @@
         overflow: auto;    
     }
 
-    nav a:visited,
-    nav a:link {
+    nav a:visited, nav a:link {
         color: white;
         text-decoration: none;
     }
 
     nav > ul {
-        display: inline;
+        display: inline-flex;
         padding: 0;
-    }
+        margin: 0;
+    }    
 
     nav > ul > li {
-        /*display: inline-block;
         list-style: none;
-        margin: 0 5px 0 5px;*/
-        list-style: none;
-        float: left;
         padding: 10px;
         color: white;
         text-decoration: none;
+        justify-content: space-between;
         font-size: 17px;
-        width: 15%; 
-        text-align: center;
+        width: auto; /* Adjust width for desktop */
     }
+
     nav > ul > li:hover {
         background-color: rgb(33, 158, 188);    
     }
+
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        display: none;
+    }
+    /* Hamburger Menu */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+}
 
     main {
         display: block;
@@ -85,25 +103,18 @@
         min-height: 85%;
     }
 
-    footer {
-        padding: 10px;
-    }
-
     aside {
         text-align: center;
         border-radius: 9%;
     }
 
-    aside,
-    article {
+    aside, article {
         padding: 2em;
     }
 
     img {
         border-radius: 5px;
-        /* Moved to .imagecontainer img ?????
-        max-width: 100%;
-        height: auto;*/ 
+        
     }
 
     article {
@@ -114,6 +125,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     @media only screen and (min-width: 768px) {
@@ -129,6 +141,44 @@
         .columns-desktop {
             display: flex;
         }
+
+        .hamburger {
+            display: none;
+        }
+
+        nav > ul > li  {
+            list-style: none;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            width: auto; /* Adjust width for desktop */
+        }
+    }
+
+    /* Mobile Menu Styles */
+    @media only screen and (max-width: 768px) {
+        nav > ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+
+        .nav-links.show {
+            display: flex;
+        }
+
+        /* Display the hamburger menu */
+        .hamburger {
+            display: block;
+        }
+
+        .logo {
+            display: block; /* Display text on smaller screens */
+            align-content: center;
+            font-size: large;
+          }
     }
 
     /* Childname Buttons*/
@@ -227,7 +277,7 @@
         /* Runner Image*/
 
     .imagecontainer {
-        width: 98.25vw;
+        width: 98.25vw;        
         height: 220px;
         background-image: url("jess-bailey-l3N9Q27zULw-unsplash.jpg");    
         background-size: cover;
@@ -245,4 +295,38 @@
         height: auto;
         
     }
+
+    /* Footer Styling */
+    footer {
+        background-color: rgb(2, 48, 71);
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    footer nav ul.footer-links {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer nav ul.footer-links li {
+        list-style: none;
+        padding: 10px;
+    }
+
+    footer nav ul.footer-links li:hover {
+        background-color: #FE123A;
+
+    }
+
+    footer nav ul.footer-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        
+    }
+
+    
 
