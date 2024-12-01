@@ -8,25 +8,38 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px rgb(2, 48, 71);
+    
 }
 
 th, td {
-    padding: 12px;
+    padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid white;
 }
 
 th {
     background-color: rgb(2, 48, 71);
     color: white;
+    
 }
 
 td input {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(2, 48, 71);
     box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgb(2, 48, 71);
+}
+
+.studentSelect {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(2, 48, 71);
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgb(2, 48, 71);
 }
 
 .subject-column {
@@ -46,12 +59,17 @@ td input {
 }
 
 .btn {
+    font-size: 14px;
     background-color: rgb(2, 48, 71);
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid white;
+    border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    text-shadow: 1px 1px black;
+    box-shadow: 1px 1px 3px white;
+
 }
 .btn:hover {
     background-color: rgb(33, 158, 188);
@@ -65,10 +83,6 @@ h1 {
     font-size: 3em;
     margin-top: 0.5em;
 }
-
-/*.banner {
-    max-width: 100%;
-}*/
 
 .sub-title {
     background-color: white;
@@ -103,39 +117,59 @@ header {
     background-color: rgb(2, 48, 71); 
 }
 
-/*should nav have a set width to stretch 
-header banner full desktop*/
 nav {
     width: 100%;
     overflow: auto;    
 }
 
-nav a:visited,
-nav a:link {
+nav a:visited, nav a:link {
     color: white;
     text-decoration: none;
 }
 
 nav > ul {
-    display: inline;
+    display: inline-flex;
     padding: 0;
-}
+    margin: 0;
+}    
 
 nav > ul > li {
-    /*display: inline-block;
     list-style: none;
-    margin: 0 5px 0 5px;*/
-    list-style: none;
-    float: left;
     padding: 10px;
     color: white;
     text-decoration: none;
+    justify-content: space-between;
     font-size: 17px;
-    width: 15%; 
-    text-align: center;
+    width: auto; /* Adjust width for desktop */
 }
+
 nav > ul > li:hover {
     background-color: rgb(33, 158, 188);    
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: none;
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
 }
 
 main {
@@ -146,22 +180,18 @@ main {
     min-height: 85%;
 }
 
-footer {
-    padding: 10px;
-}
-
 aside {
     text-align: center;
     border-radius: 9%;
 }
 
-aside,
-article {
+aside, article {
     padding: 2em;
 }
 
 img {
     border-radius: 5px;
+    
 }
 
 article {
@@ -172,12 +202,13 @@ article {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 768px) {
     
     main {
-      display: flex;
+    display: flex;
     }
     
     aside {
@@ -187,35 +218,74 @@ article {
     .columns-desktop {
         display: flex;
     }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav > ul > li  {
+        list-style: none;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        width: auto; /* Adjust width for desktop */
+    }
 }
 
-/* Childname buttons*/
+/* Mobile Menu Styles */
+@media only screen and (max-width: 768px) {
+    nav > ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
 
-.childname {
-    text-align: center;
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(2, 48, 71);
-    border: solid 2px rgb(255, 255, 255);
-    border-radius: 5px;
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Display the hamburger menu */
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        display: block; /* Display text on smaller screens */
+        align-content: center;
+        font-size: large;
+      }
 }
 
-.columns {
-    width: 100%;
-}
+    /* Footer Styling */
+    footer {
+        background-color: rgb(2, 48, 71);
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
 
-.childname button {
-    background-color: #FE123A;
-    font-size: 1.5em;
-    padding: 10px;
-    border: solid 2px rgb(255, 255, 255);
-    border-radius: 5px;
-   
-}
+    footer nav ul.footer-links {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
 
-.fixedimage {
-    position: relative;
-    
-}
+    footer nav ul.footer-links li {
+        list-style: none;
+        padding: 10px;
+    }
 
+    footer nav ul.footer-links li:hover {
+        background-color: #FE123A;
+
+    }
+
+    footer nav ul.footer-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        
+    }

@@ -189,8 +189,9 @@
         padding: 10px;
         margin: 10px;
         background-color: rgb(2, 48, 71);
-        border: solid 2px rgb(255, 255, 255);
+        border: solid 1px rgb(255, 255, 255);
         border-radius: 5px;
+        box-shadow: 1px 1px 3px black;
     }
 
     .columns {
@@ -201,9 +202,15 @@
         background-color: #FE123A;
         font-size: 1.5em;
         padding: 10px;
-        border: solid 2px rgb(255, 255, 255);
+        border: solid 1px rgb(255, 255, 255);
         border-radius: 5px;
         cursor: pointer;
+        box-shadow: 1px 1px 3px black;
+    
+    }
+
+    .childname button:hover {
+        background-color: rgb(33, 158, 188);
     
     }
 
@@ -215,6 +222,9 @@
         margin: 20px;
         background-color: rgb(2, 48, 71);
         border: solid 1px rgb(255, 255, 255);
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgb(2, 48, 71, .35), 0 6px 20px 0 rgb(2, 48, 71, .25);
+        
     }
 
     .learningcard img {
@@ -232,20 +242,24 @@
     }
 
     .learningcard button {
+        font-weight: bold;
         background-color: #FE123A;
-        padding: 5px;
-        border: solid 2px rgb(255, 255, 255);
+        padding: 5px 10px 5px 10px;
+        border: solid 1px rgb(255, 255, 255);
         border-radius: 5px;
         color: rgb(255, 255, 255);
         cursor: pointer;
+        text-shadow: 1px 1px black;
+        box-shadow: 1px 1px 1px black;
         
     }
 
     .inputValue, .inputFahrenheit {
-        font-size: 17px;
+        font-size: 16px;
         font-weight: bold;
         border-radius: 5px;
-        border: inset 2px rgb(2, 23, 34);
+        border: solid 2px white;
+        box-shadow: 1px 1px 1px black;
                
     }
 
@@ -277,8 +291,6 @@
 
     .learningcard {
         text-shadow: -1px 1px 0 rgb(2, 23, 34), 1px 1px 0 rgb(2, 23, 34), 1px -1px 0 rgb(2, 23, 34), -1px -1px 0 rgb(2, 23, 34);
-        /*text-shadow: 0px 0px 2px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255),
-        0px 0px 10px rgb(255, 255, 255);*/
         
     }
 
