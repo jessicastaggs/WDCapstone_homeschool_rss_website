@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//Dictionary API
+
 const handleClick = async () => {
     const inputValue = document.querySelector('.inputValue').value.trim();
 
@@ -76,5 +78,32 @@ const handleClick = async () => {
 
     });
 
+}
+
+//Fahrenheit to Celsius converter tool
+
+function temperatureConverter(fahrenheit) {
+    // Convert Fahrenheit to Celsius
+    return (fahrenheit - 32) * 5 / 9;
+}
+
+function showResult() {
+    // Get the value from the input field
+    let fahrenheit = document.getElementById("inputFahrenheit").value;
+    
+    // Ensure the value is a valid number before converting
+    if (fahrenheit !== "" && !isNaN(fahrenheit)) {
+       // Convert the temperature to Celsius
+       let celsius = temperatureConverter(fahrenheit).toFixed(2); // Round to 2 decimal places
+            
+       // Display the result in the outputCelsius span
+       document.getElementById("outputCelsius").textContent = celsius;
+       
+       // Show the result card
+       document.getElementById("resultCard").style.display = "block";
+   } else {
+       // Show an alert if the input is invalid
+       alert("Please enter a valid number for Fahrenheit.");
+   }
 }
 

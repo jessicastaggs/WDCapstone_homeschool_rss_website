@@ -47,10 +47,15 @@
                     </div>
                 </div>
                 <div class="learningcard">
-                    <img src="matteo-fusco-4zvnt60-pak-unsplash.jpg" alt="Thermometer" />
-                    <div class="title">&deg;C to &deg;F Converter</div>
-                    <input type="text" class="search-bar" placeholder="Type temperature here...">
-                    <button>Search</button>
+                    <div class="topcard">
+                        <img src="matteo-fusco-4zvnt60-pak-unsplash.jpg" alt="Thermometer" />
+                        <div class="title">Fahrenheit - Celsius Converter</div>
+                        <input id="inputFahrenheit" class="inputFahrenheit" type="number" placeholder="Fahrenheit">
+                        <button class="btn" onclick="showResult()">Search</button>
+                    </div>
+                    <div class="resultcard" id="resultCard" style="display: none;">
+                        <p class="outputCelsius">Celsius: <span id="outputCelsius"></span></p>
+                    </div>
                 </div>
             </section>
         </article>
