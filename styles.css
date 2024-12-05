@@ -1,352 +1,349 @@
-    * {
-        margin: 0;
+* {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+.sub-title {
+    background-color: white;
+    text-align: center;
+    max-width: 70%;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(2, 48, 71);
+}
+
+nav {
+    width: 100%;
+    overflow: auto;    
+}
+
+nav a:visited, nav a:link {
+    color: white;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+}    
+
+nav > ul > li {
+    list-style: none;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+    font-size: 17px;
+    width: auto; /* Adjust width for desktop */
+}
+
+nav > ul > li:hover {
+    background-color: rgb(33, 158, 188);    
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: none;
+}
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+main {
+    display: block;
+    background-image: linear-gradient(rgb(33, 158, 188), #FE123A);
+    padding-top: 3em;
+    padding-bottom: 5em;
+    min-height: 85%;
+}
+
+aside {
+    text-align: center;
+    border-radius: 9%;
+}
+
+aside, article {
+    padding: 2em;
+}
+
+img {
+    border-radius: 5px;
+    
+}
+
+article {
+    width: 75%;
+}
+
+P {
+    margin: .5em 0 .5em 0;
+}   
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(2, 48, 71); 
+}
+
+.columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    main {
+    display: flex;
+    }
+    
+    aside {
+        margin-left: 2%;
     }
 
-    h1 {
-        font-size: 3em;
-        margin-top: 0.5em;
+    .columns-desktop {
+        display: flex;
     }
 
-    .sub-title {
-        background-color: white;
-        text-align: center;
-        max-width: 70%;
-        font-size: 1.5em;
-        padding: 10px;
-        border-radius: 25px;
+    .hamburger {
+        display: none;
     }
 
-    html, 
-    body {
-        height: 100%;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: rgb(2, 48, 71);
-    }
-
-    P {
-        margin: .5em 0 .5em 0;
-    }   
-
-    header {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        background-color: rgb(2, 48, 71); 
-    }
-
-    nav {
-        width: 100%;
-        overflow: auto;    
-    }
-
-    nav a:visited, nav a:link {
-        color: white;
-        text-decoration: none;
-    }
-
-    nav > ul {
-        display: inline-flex;
-        padding: 0;
-        margin: 0;
-    }    
-
-    nav > ul > li {
+    nav > ul > li  {
         list-style: none;
         padding: 10px;
         color: white;
         text-decoration: none;
-        justify-content: space-between;
         font-size: 17px;
         width: auto; /* Adjust width for desktop */
     }
+}
 
-    nav > ul > li:hover {
-        background-color: rgb(33, 158, 188);    
+/* Mobile Menu Styles */
+@media only screen and (max-width: 768px) {
+    nav > ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Display the hamburger menu */
+    .hamburger {
+        display: block;
     }
 
     .logo {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        display: none;
-    }
-    /* Hamburger Menu */
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 30px;
-        height: 25px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-    }
-
-    .hamburger div {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 5px 0;
+        display: block; /* Display text on smaller screens */
+        align-content: center;
+        font-size: large;
+      }
 }
 
-    main {
-        display: block;
-        background-image: linear-gradient(rgb(33, 158, 188), #FE123A);
-        padding-top: 3em;
-        padding-bottom: 5em;
-        min-height: 85%;
-    }
+/* Childname Buttons*/
 
-    aside {
-        text-align: center;
-        border-radius: 9%;
-    }
+.childname {
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(2, 48, 71);
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+}
 
-    aside, article {
-        padding: 2em;
-    }
+.columns {
+    width: 100%;
+}
 
-    img {
-        border-radius: 5px;
-        
-    }
+.childname button {
+    background-color: #FE123A;
+    font-size: 1.5em;
+    padding: 10px;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px black;
 
-    article {
-        width: 75%;
-    }
+}
 
-    .columns {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+.childname button:hover {
+    background-color: rgb(33, 158, 188);
 
-    @media only screen and (min-width: 768px) {
-        
-        main {
-        display: flex;
-        }
-        
-        aside {
-            margin-left: 2%;
-        }
+}
 
-        .columns-desktop {
-            display: flex;
-        }
+/* Learning Cards */
 
-        .hamburger {
-            display: none;
-        }
-
-        nav > ul > li  {
-            list-style: none;
-            padding: 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 17px;
-            width: auto; /* Adjust width for desktop */
-        }
-    }
-
-    /* Mobile Menu Styles */
-    @media only screen and (max-width: 768px) {
-        nav > ul {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            text-align: center;
-        }
-
-        .nav-links.show {
-            display: flex;
-        }
-
-        /* Display the hamburger menu */
-        .hamburger {
-            display: block;
-        }
-
-        .logo {
-            display: block; /* Display text on smaller screens */
-            align-content: center;
-            font-size: large;
-          }
-    }
-
-    /* Childname Buttons*/
-
-    .childname {
-        text-align: center;
-        width: 200px;
-        padding: 10px;
-        margin: 10px;
-        background-color: rgb(2, 48, 71);
-        border: solid 1px rgb(255, 255, 255);
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px black;
-    }
-
-    .columns {
-        width: 100%;
-    }
-
-    .childname button {
-        background-color: #FE123A;
-        font-size: 1.5em;
-        padding: 10px;
-        border: solid 1px rgb(255, 255, 255);
-        border-radius: 5px;
-        cursor: pointer;
-        box-shadow: 1px 1px 3px black;
+.learningcard {
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(2, 48, 71);
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgb(2, 48, 71, .35), 0 6px 20px 0 rgb(2, 48, 71, .25);
     
-    }
+}
 
-    .childname button:hover {
-        background-color: rgb(33, 158, 188);
+.learningcard img {
+    width: 100%;
+                
+}
+
+.learningcard .title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 5px 0 5px 0;
+
+}
+
+.learningcard button {
+    font-weight: bold;
+    background-color: #FE123A;
+    padding: 5px 10px 5px 10px;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-shadow: 1px 1px black;
+    box-shadow: 1px 1px 1px black;
     
-    }
+}
 
-    /* Learning Cards */
+.inputValue, .inputFahrenheit {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid 2px white;
+    box-shadow: 1px 1px 1px black;
+           
+}
 
-    .learningcard {
-        width: 300px;
-        padding: 10px;
-        margin: 20px;
-        background-color: rgb(2, 48, 71);
-        border: solid 1px rgb(255, 255, 255);
-        border-radius: 5px;
-        box-shadow: 0 4px 8px 0 rgb(2, 48, 71, .35), 0 6px 20px 0 rgb(2, 48, 71, .25);
+    /* Bottom of Definition Card*/
+
+.bottomcard {
+    color: rgb(255, 255, 255);
         
-    }
+}
 
-    .learningcard img {
-        width: 100%;
-                    
-    }
-
-    .learningcard .title {
-        font-size: 20px;
-        font-weight: bold;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        padding: 5px 0 5px 0;
-
-    }
-
-    .learningcard button {
-        font-weight: bold;
-        background-color: #FE123A;
-        padding: 5px 10px 5px 10px;
-        border: solid 1px rgb(255, 255, 255);
-        border-radius: 5px;
-        color: rgb(255, 255, 255);
-        cursor: pointer;
-        text-shadow: 1px 1px black;
-        box-shadow: 1px 1px 1px black;
-        
-    }
-
-    .inputValue, .inputFahrenheit {
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 5px;
-        border: solid 2px white;
-        box-shadow: 1px 1px 1px black;
-               
-    }
-
-        /* Bottom of Definition Card*/
-
-    .bottomcard {
-        color: rgb(255, 255, 255);
-            
-    }
-
-    .value {
-        font-size: 24px;
-        padding: 10px 0 10px 0;
-        text-transform: capitalize;
-        
-    }
-
-    .outputCelsius {
-        font-size: 24px;
-        font-weight: bold;
-        color: rgb(255, 255, 255);
-    }
-
-    h4 {
-        text-decoration: underline;
-        color: rgb(255, 255, 255);
-            
-    }
-
-    .learningcard {
-        text-shadow: -1px 1px 0 rgb(2, 23, 34), 1px 1px 0 rgb(2, 23, 34), 1px -1px 0 rgb(2, 23, 34), -1px -1px 0 rgb(2, 23, 34);
-        
-    }
-
-        /* Runner Image*/
-
-    .imagecontainer {
-        width: 98.25vw;        
-        height: 220px;
-        background-image: url("jess-bailey-l3N9Q27zULw-unsplash.jpg");    
-        background-size: cover;
-        background-position: center 74%;
-        position: relative;
-        left: 90%;
-        bottom: -7.75vw;
-        margin-left: -89vw;
-        opacity: .8;   
-        border-radius: 3px;     
-    }
- 
-    .imagecontainer img {
-        max-width: 100%;
-        height: auto;
-        
-    }
-
-    /* Footer Styling */
-    footer {
-        background-color: rgb(2, 48, 71);
-        padding: 10px;
-        color: white;
-        text-align: center;
-    }
-
-    footer nav ul.footer-links {
-        display: flex;
-        justify-content: flex-start;
-        padding: 0;
-        margin: 0;
-    }
-
-    footer nav ul.footer-links li {
-        list-style: none;
-        padding: 10px;
-    }
-
-    footer nav ul.footer-links li:hover {
-        background-color: #FE123A;
-
-    }
-
-    footer nav ul.footer-links li a {
-        color: white;
-        text-decoration: none;
-        font-size: 17px;
-        
-    }
-
+.value {
+    font-size: 24px;
+    padding: 10px 0 10px 0;
+    text-transform: capitalize;
     
+}
 
+.outputCelsius {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+h4 {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+        
+}
+
+.learningcard {
+    text-shadow: -1px 1px 0 rgb(2, 23, 34), 1px 1px 0 rgb(2, 23, 34), 1px -1px 0 rgb(2, 23, 34), -1px -1px 0 rgb(2, 23, 34);
+    
+}
+
+    /* Runner Image*/
+
+.imagecontainer {
+    width: 98.25vw;        
+    height: 220px;
+    background-image: url("jess-bailey-l3N9Q27zULw-unsplash.jpg");    
+    background-size: cover;
+    background-position: center 74%;
+    position: relative;
+    left: 90%;
+    bottom: -7.75vw;
+    margin-left: -89vw;
+    opacity: .8;   
+    border-radius: 3px;     
+}
+
+.imagecontainer img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgb(2, 48, 71);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+footer nav ul.footer-links {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul.footer-links li {
+    list-style: none;
+    padding: 10px;
+}
+
+footer nav ul.footer-links li:hover {
+    background-color: #FE123A;
+
+}
+
+footer nav ul.footer-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
