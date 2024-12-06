@@ -5,15 +5,22 @@
 h1 {
     font-size: 3em;
     margin-top: 0.5em;
+    color: white;
+    text-shadow: 4px 4px rgb(2, 48, 71);
 }
 
 .sub-title {
-    background-color: white;
+    background-color: rgb(2, 48, 71);
+    color: white;
+    text-shadow: 2px 2px #FE123A;
     text-align: center;
+    font-weight: bold;
     max-width: 70%;
     font-size: 1.5em;
     padding: 10px;
     border-radius: 25px;
+    border: solid 1px rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px black;
 }
 
 html, 
@@ -62,6 +69,7 @@ nav > ul > li:hover {
     font-weight: bold;
     display: none;
 }
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -128,6 +136,7 @@ header {
     flex-wrap: wrap;
 }
 
+/* Desktop Menu Styles */
 @media only screen and (min-width: 768px) {
     
     main {
@@ -206,12 +215,10 @@ header {
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 1px 1px 3px black;
-
 }
 
 .childname button:hover {
     background-color: rgb(33, 158, 188);
-
 }
 
 /* Learning Cards */
@@ -224,12 +231,10 @@ header {
     border: solid 1px rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgb(2, 48, 71, .35), 0 6px 20px 0 rgb(2, 48, 71, .25);
-    
 }
 
 .learningcard img {
     width: 100%;
-                
 }
 
 .learningcard .title {
@@ -238,7 +243,7 @@ header {
     text-align: center;
     color: rgb(255, 255, 255);
     padding: 5px 0 5px 0;
-
+    text-shadow: 2px 2px rgb(12, 12, 12);
 }
 
 .learningcard button {
@@ -251,7 +256,6 @@ header {
     cursor: pointer;
     text-shadow: 1px 1px black;
     box-shadow: 1px 1px 1px black;
-    
 }
 
 .inputValue, .inputFahrenheit {
@@ -260,21 +264,18 @@ header {
     border-radius: 5px;
     border: solid 2px white;
     box-shadow: 1px 1px 1px black;
-           
 }
 
-    /* Bottom of Definition Card*/
+/* Bottom of Definition Card*/
 
 .bottomcard {
     color: rgb(255, 255, 255);
-        
 }
 
 .value {
     font-size: 24px;
     padding: 10px 0 10px 0;
     text-transform: capitalize;
-    
 }
 
 .outputCelsius {
@@ -286,15 +287,13 @@ header {
 h4 {
     text-decoration: underline;
     color: rgb(255, 255, 255);
-        
 }
 
 .learningcard {
     text-shadow: -1px 1px 0 rgb(2, 23, 34), 1px 1px 0 rgb(2, 23, 34), 1px -1px 0 rgb(2, 23, 34), -1px -1px 0 rgb(2, 23, 34);
-    
 }
 
-    /* Runner Image*/
+/* Runner Image*/
 
 .imagecontainer {
     width: 98.25vw;        
@@ -313,7 +312,6 @@ h4 {
 .imagecontainer img {
     max-width: 100%;
     height: auto;
-    
 }
 
 /* Footer Styling */
@@ -338,12 +336,10 @@ footer nav ul.footer-links li {
 
 footer nav ul.footer-links li:hover {
     background-color: #FE123A;
-
 }
 
 footer nav ul.footer-links li a {
     color: white;
     text-decoration: none;
     font-size: 17px;
-    
 }

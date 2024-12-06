@@ -28,36 +28,37 @@
     <main>
         <aside><img src="homeschool_logo.jpg" alt="Staggs' Family Homeschool"></aside>
         <article>
-            <section class="columns-desktop">
-                <div class="learningcard">
-                    <div class="topcard">
-                        <img src="romain-vignes-ywqa9IZB-dU-unsplash.jpg" alt="Dictionary" />
-                        <div class="title">Dictionary</div>
-                        <input type="text" class="inputValue" placeholder="Start typing any word...">
-                        <button class="btn" onclick="handleClick()">Search</button>
+            <h1>Learning Tools</h1>
+                <section class="columns-desktop">
+                    <div class="learningcard">
+                        <div class="topcard">
+                            <img src="romain-vignes-ywqa9IZB-dU-unsplash.jpg" alt="Dictionary" />
+                            <div class="title">Dictionary</div>
+                            <input type="text" class="inputValue" placeholder="Start typing any word...">
+                            <button class="btn" onclick="handleClick()">Search</button>
+                        </div>
+                        <div class="bottomcard" style="display: none;">
+                            <h2 class="value"></h2>
+                            <h4>Parts of speech:</h4>
+                            <p class="partOfSpeech"></p>
+                            <h4>Definition:</h4>
+                            <p class="definition"></p>
+                            <h4 class="exampleLabel">Example:</h4>
+                            <p class="example"></p>
+                        </div>
                     </div>
-                    <div class="bottomcard" style="display: none;">
-                        <h2 class="value"></h2>
-                        <h4>Parts of speech:</h4>
-                        <p class="partOfSpeech"></p>
-                        <h4>Definition:</h4>
-                        <p class="definition"></p>
-                        <h4 class="exampleLabel">Example:</h4>
-                        <p class="example"></p>
+                    <div class="learningcard">
+                        <div class="topcard">
+                            <img src="matteo-fusco-4zvnt60-pak-unsplash.jpg" alt="Thermometer" />
+                            <div class="title">Fahrenheit - Celsius Converter</div>
+                            <input id="inputFahrenheit" class="inputFahrenheit" type="number" placeholder="Fahrenheit">
+                            <button class="btn" onclick="showResult()">Search</button>
+                        </div>
+                        <div class="resultcard" id="resultCard" style="display: none;">
+                            <p class="outputCelsius">Celsius: <span id="outputCelsius"></span></p>
+                        </div>
                     </div>
-                </div>
-                <div class="learningcard">
-                    <div class="topcard">
-                        <img src="matteo-fusco-4zvnt60-pak-unsplash.jpg" alt="Thermometer" />
-                        <div class="title">Fahrenheit - Celsius Converter</div>
-                        <input id="inputFahrenheit" class="inputFahrenheit" type="number" placeholder="Fahrenheit">
-                        <button class="btn" onclick="showResult()">Search</button>
-                    </div>
-                    <div class="resultcard" id="resultCard" style="display: none;">
-                        <p class="outputCelsius">Celsius: <span id="outputCelsius"></span></p>
-                    </div>
-                </div>
-            </section>
+                </section>
         </article>
     </main>
     <footer>
