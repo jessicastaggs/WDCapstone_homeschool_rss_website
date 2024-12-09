@@ -6,7 +6,7 @@ The project's current state includes a playfully styled homepage, a "Learning To
 
 ## Integrated Features:
 
-### Section 1 - 
+## Section 1 -
     Use arrays, objects, sets or maps to store and retrieve information that is displayed in your app.
 
         -Used JSON object retrieved from Dictionary API to display information on site.
@@ -15,10 +15,9 @@ The project's current state includes a playfully styled homepage, a "Learning To
 
         -Converting user input from Fahrenheit to Celsius.
 
-### Section 2 - 
-    
+## Section 2 -    
     Retrieve data from a third-party API and use it to display something within your app.
-    
+
         -Retrieved data from Dictionary API to display word, part of speech, definition, and an example sentence (if available).
 
 ## Responsive Design
@@ -47,6 +46,7 @@ The project's current state includes a playfully styled homepage, a "Learning To
 
 ## Technical Information
 
-Dictionary API can be found [HERE](https://dictionaryapi.dev/)
+Dictionary API can be found [here.](https://dictionaryapi.dev/)
 
-Images can be found [HERE](https://unsplash.com/)
+Images were acquired on [Unsplash.](https://unsplash.com/)
+
