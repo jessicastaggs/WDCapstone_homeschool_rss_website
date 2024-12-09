@@ -178,6 +178,12 @@ header {
         display: flex;
     }
 
+    article {
+        align-content: center;
+        margin-left: 70px;
+        margin-top: -50px;
+    }
+    
     /* Display the hamburger menu */
     .hamburger {
         display: block;
@@ -187,7 +193,7 @@ header {
         display: block; /* Display text on smaller screens */
         align-content: center;
         font-size: large;
-      }
+    }   
 }
 
 /* Childname Buttons*/
