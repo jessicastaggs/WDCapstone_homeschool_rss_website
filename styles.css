@@ -179,11 +179,18 @@ header {
     }
 
     article {
-        align-content: center;
-        margin-left: 40px;
         margin-top: -50px;
     }
-    
+
+    h1, .sub-title, .childname, .columns {
+        align-content: center;
+        margin-left: 40px;
+    }
+
+    .learningcard {
+        margin-left: -50px;
+    }
+
     /* Display the hamburger menu */
     .hamburger {
         display: block;
