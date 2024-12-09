@@ -15,7 +15,9 @@ The project's current state includes a playfully styled homepage, a "Learning To
 
 ## Section 2 -    
     Retrieve data from a third-party API and use it to display something within your app.
-        -Retrieved data from Dictionary API to display word, part of speech, definition, and an example sentence (if available).
+        -Retrieved data from Dictionary API to display word, part of speech, definition, and an example 
+        
+        sentence (if available).
 
 ## Responsive Design
 -Website adapts to both desktop and mobile screen sizes.
